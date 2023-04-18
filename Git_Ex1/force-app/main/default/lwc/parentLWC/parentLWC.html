@@ -1,0 +1,10 @@
+<template>
+    <lightning-card  variant="Narrow"  title="Hello Parent" icon-name="standard:account">
+        <p class="slds-p-horizontal_small">
+            <lightning-button variant="brand" label="Send Data To Child" onclick={sendData}></lightning-button>
+            <br/>
+            {messageFromChild}
+        </p>
+    </lightning-card>
+    <c-child text-message={messageVal} onchildmessage={getMessageFromChild}></c-child>
+</template>

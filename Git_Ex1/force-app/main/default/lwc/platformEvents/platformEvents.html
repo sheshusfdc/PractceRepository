@@ -1,0 +1,9 @@
+<template>
+    <lightning-card  variant="Narrow"  title="Hello" icon-name="standard:account">
+        <template for:each={accountNameList} for:item="acc" for:index="index">
+           <li key={acc.Id}>
+                {acc.Name}
+           </li>
+        </template>
+    </lightning-card>
+</template>
