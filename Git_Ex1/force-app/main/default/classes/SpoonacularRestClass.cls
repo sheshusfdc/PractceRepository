@@ -7,7 +7,7 @@ public class SpoonacularRestClass {
         request.setEndpoint(SPOONACULAR_API+'/recipes/random?apiKey='+String_API_KEY);
         request.setMethod('GET');
         HttpResponse response = http.send(request);
-        // If the request is successful, parse the JSON response.
+        // If the request is successful, parse the JSON response. Test
         if(response.getStatusCode() == 200) {
             system.debug('Response '+response.getBody());
         }
