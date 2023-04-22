@@ -22,20 +22,23 @@ export default class MultipleWireMethods extends LightningElement {
     @track accountId;
     @track opportunityList;
     columns = columns;
- 
-    @wire(fetchAccounts, {})  
-    wiredAccount( { error, data } ) {
-        if(data) {
-            this.accountId = data[0].Id;
-        } else if (error) {
-            console.log(error);
-        }
-    }
+     
  
     @wire(fetchOpportunity, {accountId : '$accountId'})  
     wiredOpportunity( { error, data } ) {
         if(data) {
             this.opportunityList = data;
+            console.log('Its Called - 2');
+        } else if (error) {
+            console.log(error);
+        }
+    }
+
+    @wire(fetchAccounts, {})  
+    wiredAccount( { error, data } ) {
+        if(data) {
+            this.accountId = data[0].Id;
+            console.log('Its Called - 1');
         } else if (error) {
             console.log(error);
         }
