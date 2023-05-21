@@ -1,0 +1,15 @@
+<template>
+    <lightning-card  variant="Narrow"  title="Account Search" icon-name="standard:account">
+        <lightning-input type="search" variant="standard" name="name" 
+        label="Search Account" placeholder="type here..." value={accountName}
+        onchange={searchAccountByParam}
+        class="slds-m-bottom_small"></lightning-input>
+        <br/>
+        <div class="slds-m-left_medium">
+            <template for:each={accountList} for:item="acc" for:index="index">
+                <option key={acc.Id}>{acc.Name}</option>
+            </template>
+        </div>
+       
+    </lightning-card>
+</template>

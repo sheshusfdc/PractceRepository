@@ -1,0 +1,9 @@
+<template>
+    <lightning-card  variant="Narrow"  title="Collection Map" icon-name="standard:account">
+       <template if:true={leadList} for:each={leadList} for:item="con" for:index="index">
+          <li key={con.key}>
+               {con.key} - {con.value}
+          </li>
+       </template>
+    </lightning-card>
+</template>

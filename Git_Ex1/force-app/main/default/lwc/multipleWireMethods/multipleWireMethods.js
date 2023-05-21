@@ -22,7 +22,8 @@ export default class MultipleWireMethods extends LightningElement {
     @track accountId;
     @track opportunityList;
     columns = columns;
-     
+ 
+    
  
     @wire(fetchOpportunity, {accountId : '$accountId'})  
     wiredOpportunity( { error, data } ) {
